@@ -1,4 +1,6 @@
 from abc import abstractmethod, abstractproperty
+''' The abstractmethod() only affects subclasses derived using regular inheritance;
+“virtual subclasses” registered with the ABC’s register() method are not affected.'''
 
 
 class AbstractInterface():
