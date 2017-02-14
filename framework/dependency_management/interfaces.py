@@ -8,7 +8,7 @@ class AbstractInterface():
 
 
 class CommandRegisterInterface(AbstractInterface):
-
+    #like a = func(a) instead of doing this again and again we use decorator @a instead.
     @abstractmethod
     def AddCommand(self):
         pass
