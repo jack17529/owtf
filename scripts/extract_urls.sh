@@ -32,7 +32,8 @@ case $TYPE in
   "w3af") 
 	#grep "$BASE_URL" W3AF.txt |tr '>' "\n"|tr '>' "\n" |tr '"' "\n"|tr " " "\n" | grep "$BASE_URL"
 	#grep "$BASE_URL" $FILE |tr '>' "\n"|tr '>' "\n" |tr '"' "\n"|tr " " "\n" | grep "$BASE_URL"
-	grep "$BASE_URL" $FILE |tr '"' "\n"|tr " " "\n" | grep "^$BASE_URL" | uniq
+	#grep "$BASE_URL" $FILE |tr '"' "\n"|tr " " "\n" | grep "^$BASE_URL" | uniq
+	grep "$BASE_URL" $FILE |tr '>' "\n"|tr " " "\n" | grep "^$BASE_URL" | uniq
 	;;
   "arachni")
 	#grep "^\[+\] http" arachni_report*.txt |tr "]" "\n" |grep "$BASE_URL"|sed 's/^ //'|grep "://"
